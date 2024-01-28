@@ -32,7 +32,7 @@ function brougringo(){
 
     console.log(pais)
 
-    if (pais == 'brasil'){ // == significa igual, = significa recebe. O mais indicado nessa situação é ==
+    if (pais == 'brasil' || pais == 'Brasil'){ // == significa igual, = significa recebe. O mais indicado nessa situação é ==
         resbr.innerHTML = 'Você é Brasileiro'
     } else {
         resbr.innerHTML = 'Você é Estrangeiro'
