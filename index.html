@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Praticas</title>
+</head>
+<body>
+
+    <div>
+        <form action="">
+            <fieldset>
+                <legend><h1 id="bv"></h1></legend>
+                <h2 id="hrs"></h2>
+            </fieldset>
+        </form>
+    </div>
+    <script src="horas.js"></script>
+
+    <div id="aproveitamento">
+            <form action="">
+                <fieldset>
+                    <legend><h1>Aproveitamento</h1></legend>
+                    <p>Nome: <input type="text" name="nome" id="nome"></p>
+                    <p>Primeira nota: <input type="number" name="nota1" id="nota1"></p>
+                    <p>Segunda nota: <input type="number" name="nota2" id="nota2"></p>
+                    <p><input type="button" value="Verificar" onclick="aproveitamento()"></p>
+                    <p id="resapr">Resultado: </p>
+                </fieldset>
+            </form>
+    </div>
+
+    <div id="brougringo">
+        <form action="">
+            <fieldset>
+                <legend><h1>Você é Brasileiro ou Estrangeiro?</h1>
+                    <p>Qual o país que você nasceu? <input type="text" name="broug" id="brougr"> <input type="button" value="Verificar" onclick="brougringo()"></p>
+                    <p id="resbr"></p>
+                </legend>
+            </fieldset>
+        </form>
+    </div>
+
+    <div id="vcvota">
+        <form action="">
+            <fieldset>
+                <legend><h1>Você vota?</h1></legend>
+                <p>Digite o ano do seu nascimento: <input type="number" name="" id="anonascvoto"> <input type="button" value="Verificar" onclick="votaounvota()"></p>
+                <p id="resvoto"></p>
+            </fieldset>
+        </form>
+    </div>
+
+    <div>
+        <form action="">
+            <fieldset>
+                <legend><h1>Impar ou Par</h1></legend>
+                <p>Digite um número: <input type="number" name="" id="num"> <input type="button" value="Verificar" onclick="imparoupar()"></p>
+                <p id="resioup"></p>
+            </fieldset>
+        </form>
+    </div>
+
+    <div>
+        <form action="">
+            <fieldset>
+                <legend><h1>Super Contador</h1></legend>
+                <p>Inicio: <input type="number" name="inicio" id="inicio"></p>
+                <p>Fim: <input type="number" name="fim" id="fim"></p>
+                <p>Passo: <input type="number" name="passo" id="passo"></p>
+                <input type="button" value="Contar" onclick="contar()">
+                <p id="contando">Preencha os campos acima...</p>
+                <p id="rescont"></p>
+            </fieldset>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
