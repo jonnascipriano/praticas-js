@@ -95,7 +95,7 @@ switch(mes){
         document.body.style.background = '#523'
     } else if (hora < 18){
         bv.innerHTML = 'Boa tarde'
-        document.body.style.background = '#777'
+        document.body.style.background = '#722'
     } else {
         bv.innerHTML = 'Boa noite'
     }

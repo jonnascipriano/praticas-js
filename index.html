@@ -76,6 +76,28 @@
         </form>
     </div>
 
+    <div>
+        <form action="">
+            <fieldset>
+                <legend><h1>Parcelamento</h1></legend>
+                <p>Qual o valor do produto? <input type="number" name="valor" id="valor"></p>
+                <p>Forma de pagamento:
+                    <select name="parcela" id="parcela">
+                        <option value="10xsj" id="f10x">10x SEM JUROS</option>
+                        <option value="12x140" id="12x1">12X COM JUROS 1.40%</option>
+                        <option value="12x292" id="12x2">12X COM JUROS 2.92%</option>
+                    </select>
+                </p>
+                <p>Quantas parcelas: 
+                    <select name="qntparc" id="qndparc"></select>
+                </p>
+                <p id="resparc"></p>
+            </fieldset>
+        </form>
+    </div>
+
+    <script src="parc.js"></script>
+
     <script src="script.js"></script>
 </body>
 </html>
