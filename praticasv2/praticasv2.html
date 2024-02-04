@@ -13,7 +13,46 @@
     </div>
 
     <div>
-        <form action=""></form>
+        <form action="">
+            <fieldset>
+                <legend><h1>IMC</h1></legend>
+                <p>Digite sua altura: <input type="number" name="altura" id="altura" placeholder="Altura"></p>
+                <p>Digite seu peso: <input type="number" name="peso" id="peso" placeholder="Peso"></p>
+                <p><input type="button" value="Verificar" onclick="calcimc()"></p>
+                <p id="resimc">Resposta: </p>
+            </fieldset>
+        </form>
+    </div>
+
+    <div>
+        <form action="">
+            <fieldset>
+                <legend><h1>Calculadora de porcentagens</h1></legend>
+                <p>Quero saber quantos 
+                    <input type="number" name="porc" id="porc">% de <input type="number" name="valor" id="valor">
+                </p>
+                <input type="button" value="Calcular" onclick="porcentagem()">
+                <p id="resporc">Resposta</p>
+            </fieldset>
+        </form>
+    </div>
+
+    <div>
+        <form action="">
+            <fieldset>
+                <legend><h1>Tabuada</h1></legend>
+                <p>
+                    Número: 
+                    <input type="number" name="num" id="num">
+                    <input type="button" value="Gerar tabuada" onclick="tabuada()">
+                </p>
+                <p>
+                    <select name="tab" id="tab" size="10">
+                        <option value="">Digite um valor acima</option>
+                    </select>
+                </p>
+            </fieldset>
+        </form>
     </div>
 
     <script src="script.js"></script>
