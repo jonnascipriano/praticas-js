@@ -65,6 +65,78 @@ if(hora < 12){
 
     date.innerHTML += ` de ${ano}`
 
+    // ============================================
+
+function b1(){
+    alert('Você clicou no 1º Botão!')
+}
+
+function b2(){
+    alert('Você clicou no 2º Botão!')
+}
+
+function b3(){
+    alert('Você clicou no 3º Botão!')
+}
+
+    // ============================================
+
+function inides(){
+    let nome = window.prompt('Digite seu nome')
+    let idade = window.prompt(`Olá, ${nome}! Quantos anos você tem?`)
+    alert(`Acabei de conhecer ${nome}, que tem ${idade} anos de idade!`)
+}
+
+    // ============================================
+
+
+function antdep(){
+    let num = window.prompt('Digite um número inteiro qualquer')
+    let ant = Number(num) - 1
+    let pos = Number(num) + 1
+    alert(`Antes de ${num}, temos o número ${ant}.\nDepois de ${num}, temos o número ${pos}.`)
+}
+
+    // ============================================
+
+
+function comprar(){
+    let produto = window.prompt('Que produto você está comprando?')
+    let valor = Number(window.prompt(`Quanto custa ${produto} que você está comprando?`))
+    let valorpago = Number(window.prompt(`Qual foi o valor que você deu para pagar ${produto}`))
+    let troco = valorpago - valor
+
+    if(valorpago > valor){
+        alert(`Você comprou ${produto} que custou R$${valor.toFixed(2)}.\nDeu R$${valorpago.toFixed(2)} em dinheiro e vai receber ${troco.toFixed(2)} de troco.\nVolte sempre!`)
+    } else {
+        alert(`Está faltando R$${valor-valorpago.toFixed(2)} para completar a compra do produto`)
+    }
+}
+
+    // ============================================
+
+function converter(){
+    let metros = Number(prompt('Digite uma distância em metros(m)'))
+    let resconv = document.getElementById('resconv')
+
+    let km = metros / 1000
+    let hm = metros / 100
+    let dam = metros / 10
+    let dm = metros * 10
+    let cm = metros * 100
+    let mm = metros * 1000
+
+    resconv.innerHTML += `<p><strong>A distância de ${metros} metros, corresponte a...</strong></p>`
+    resconv.innerHTML += `<p>${metros/1000} quilômetros (Km)</p>`
+    resconv.innerHTML += `<p>${hm} hectômetros (Hm)</p>`
+    resconv.innerHTML += `<p>${dam} decâmetros (Dam)</p>`
+    resconv.innerHTML += `<p>${dm} decímetros (dm)</p>`
+    resconv.innerHTML += `<p>${cm} (cm)</p>`
+    resconv.innerHTML += `<p>${mm} milímetros (mm)</p>`
+}
+
+    // ============================================
+
 function calcimc(){
     var peso = document.getElementById('peso')
     var p = Number(peso.value)
@@ -93,6 +165,8 @@ function calcimc(){
     }
 }
 
+    // ============================================
+
 function porcentagem(){
     var porc = document.getElementById('porc')
     var p = Number(porc.value)
@@ -107,18 +181,17 @@ function porcentagem(){
     resporc.innerHTML = res
 }
 
+    // ============================================
 
 function tabuada(){
-    let num = document.getElementById('num')
+    let numero = document.getElementById('numero')
+    let n = Number(numero.value)
     let tab = document.getElementById('tab')
 
-    if(num.value.length == 0){
+    if(numero.value.length == 0){
         alert('Digite um número')
-    } else if (num.value.length >= 10){
-        alert('Máximo de caracteres excedido (no máximo 10)')
     } else {
         tab.innerHTML = ''
-        let n = Number(num.value)
         for(let c = 1; c <= 10; c++){
             let item = document.createElement('option')
             item.text = `${n} x ${c} = ${n*c}`
@@ -127,3 +200,40 @@ function tabuada(){
         }
     }
 }
+
+    // ============================================
+
+
+function contador(){
+    let ini = document.getElementById('inicio')
+    let i = Number(ini.value)
+
+    let passo = document.getElementById('passo')
+    let p = Number(passo.value)
+
+    let fim = document.getElementById('fim')
+    let f = Number(fim.value)
+
+    let rescont = document.getElementById('rescont')
+
+    rescont.innerHTML = 'Resultado: '
+
+    if(p <= 0){
+        alert('Digite um valor válido')
+    } else {
+        if(i<f){
+            for(let c = i; c <= f; c+=p){
+                rescont.innerHTML += `\u{1F449} ${c} `
+            }
+        } else {
+            for(let c = i; c >= f; c-=p){
+                rescont.innerHTML += `\u{1F449} ${c} `
+            }
+        }
+        rescont.innerHTML += `\u{1F3C1}`
+    }
+    
+}
+
+    // ============================================
+

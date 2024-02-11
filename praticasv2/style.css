@@ -12,6 +12,11 @@ div{
     margin: auto;
 }
 
+div.botoes input{
+    width: 15%;
+    height: 50px;
+}
+
 fieldset{
     padding: 10px;
 }
@@ -26,6 +31,10 @@ input#porc{
 
 input#valor{
     width: 8%;
+}
+
+select#lista{
+    width: 150px;
 }
 
 #bv{

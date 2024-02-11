@@ -7,10 +7,69 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- ======================================== -->
     <div id="bv">
         <h1 id="ola"></h1>
         <p id="date"></p>
     </div>
+    <!-- ======================================== -->
+
+    <div class="botoes">
+        <form action="">
+            <fieldset>
+                <legend><h1>Boas vindas</h1></legend>
+                <input type="button" value="Inicie o desafio" onclick="inides()">
+            </fieldset>
+        </form>
+    </div>
+    <!-- ======================================== -->
+    <div class="botoes">
+        <form action="">
+            <fieldset>
+                <legend><h1>Desafio das mensagens</h1></legend>
+                <input type="button" value="Botão 1" onclick="b1()">
+                <input type="button" value="Botão 2" onclick="b2()">
+                <input type="button" value="Botão 3" onclick="b3()">
+            </fieldset>
+        </form>
+    </div>
+    <!-- ======================================== -->
+
+    <div class="botoes">
+        <form action="">
+            <fieldset>
+                <legend><h1>Antes e depois</h1></legend>
+                <input type="button" value="Antecessor e Sucessor" onclick="antdep()">
+            </fieldset>
+        </form>
+    </div>
+
+    <!-- ======================================== -->
+
+    <div class="botoes">
+        <form action="">
+            <fieldset>
+                <legend><h1>Calculando o Troco</h1></legend>
+                <input type="button" value="Comprar produto" onclick="comprar()">
+            </fieldset>
+        </form>
+    </div>
+
+    <!-- ======================================== -->
+
+    <div class="botoes">
+        <form action="">
+            <fieldset>
+                <legend><h1>Conversor de Medidas</h1></legend>
+                <input type="button" value="Converter" onclick="converter()">
+                <p id="resconv">
+                    Clique no botão acima para iniciar
+                </p>
+            </fieldset>
+        </form>
+    </div>
+
+    <!-- ======================================== -->
 
     <div>
         <form action="">
@@ -23,6 +82,7 @@
             </fieldset>
         </form>
     </div>
+    <!-- ======================================== -->
 
     <div>
         <form action="">
@@ -36,24 +96,64 @@
             </fieldset>
         </form>
     </div>
+    <!-- ======================================== -->
 
     <div>
         <form action="">
             <fieldset>
                 <legend><h1>Tabuada</h1></legend>
                 <p>
-                    Número: 
-                    <input type="number" name="num" id="num">
-                    <input type="button" value="Gerar tabuada" onclick="tabuada()">
+                    Digite um número: 
+                    <input type="number" name="numero" id="numero"> <input type="button" value="Gerar tabuada" onclick="tabuada()">
                 </p>
+
                 <p>
-                    <select name="tab" id="tab" size="10">
+                    <select name="" id="tab" size="10">
                         <option value="">Digite um valor acima</option>
                     </select>
                 </p>
             </fieldset>
         </form>
     </div>
+    <!-- ======================================== -->
+
+    <div>
+        <form action="">
+            <fieldset>
+                <legend><h1>Super Contador</h1></legend>
+                <p>Inicio: <input type="number" name="inicio" id="inicio"></p>
+                <p>Passo: <input type="number" name="passo" id="passo"></p>
+                <p>Fim: <input type="number" name="fim" id="fim"></p>
+                <input type="button" value="Gerar contador" onclick="contador()">
+
+                <p id="rescont">Resultado: </p>
+            </fieldset>
+        </form>
+    </div>
+<!-- ==================== ESTUDAR MAIS ========================== -->
+
+    <div>
+        <form action="">
+            <fieldset>
+                <legend><h1>Analisador</h1></legend>
+                <p>
+                    Digite um número: <input type="number" name="num" id="num"> <input type="button" value="Adicionar" onclick="adicionar()">
+                </p>
+                <p>
+                    <select name="lista" id="lista" size="10"></select>
+                </p>
+                <input type="button" value="Finalizar" onclick="finalizar()">
+                <p id="resan"></p>
+            </fieldset>
+        </form>
+    </div>
+
+    <script src="analisador.js"></script>
+
+<!-- ==================== ESTUDAR MAIS ========================== -->
+
+
+
 
     <script src="script.js"></script>
 </body>
