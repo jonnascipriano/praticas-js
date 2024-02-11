@@ -126,8 +126,9 @@ function converter(){
     let cm = metros * 100
     let mm = metros * 1000
 
+    resconv.innerHTML = ''
     resconv.innerHTML += `<p><strong>A distância de ${metros} metros, corresponte a...</strong></p>`
-    resconv.innerHTML += `<p>${metros/1000} quilômetros (Km)</p>`
+    resconv.innerHTML += `<p>${km.toFixed(2)} quilômetros (Km)</p>`
     resconv.innerHTML += `<p>${hm} hectômetros (Hm)</p>`
     resconv.innerHTML += `<p>${dam} decâmetros (Dam)</p>`
     resconv.innerHTML += `<p>${dm} decímetros (dm)</p>`
@@ -136,6 +137,56 @@ function converter(){
 }
 
     // ============================================
+    
+function convtemp(){
+    let tempc = Number(prompt('Digite uma temperatura em ºC (Celsius)'))
+    let resconversor = document.getElementById('resconversor')
+
+    let tempk = tempc + 273.15
+    let tempf = (tempc * 1.8) + 32
+
+    resconversor.innerHTML = ''
+    resconversor.innerHTML += `<p><strong>A temperatura em ${tempc}ºC, corresponde a...</strong></p>`
+    resconversor.innerHTML += `<p>${tempk.toFixed(2)}ºK (Kelvin)</p>`
+    resconversor.innerHTML += `<p>${tempf.toFixed(2)}ºF (Fahrenheit)</p>`
+
+}
+
+    // ============================================
+
+function desconto(){
+    let produtodesc = prompt('Qual é o produto que você está comprando?')
+    let precoprod = Number(prompt(`Qual é o preço de '${produtodesc}'`))
+    let desconto = precoprod * 0.1
+    let precocomdesconto = precoprod - desconto
+    let resdesc = document.getElementById('resdesc')
+
+    resdesc.innerHTML = ''
+    resdesc.innerHTML += `<p><strong>Calculando desconto de 10% para ${produtodesc}</strong></p>`
+    resdesc.innerHTML += `<p>O preço original era R$${precoprod.toFixed(2)}</p>`
+    resdesc.innerHTML += `<p>Você acaba de ganhar R$${desconto.toFixed(2)} (-10%)</p>`
+    resdesc.innerHTML += `<p>No fim, você vai pagar R$${precocomdesconto.toFixed(2)} no produto ${produtodesc}</p>`
+}
+
+    // ============================================
+
+function reajuste(){
+    let funcionario = prompt('Qual é o nome do funcionário?')
+    let salario = Number(prompt(`Qual é o salário de ${funcionario}`))
+    let porc_reaj = Number(prompt(`O salário de ${funcionario} vai ser reajustado em qual porcentagem?`))
+    let resreaj = document.getElementById('resreaj')
+    let porcsalarionovo = salario * (porc_reaj/100)
+    let salarionovo = salario + porcsalarionovo
+
+    resreaj.innerHTML = ''
+    resreaj.innerHTML += `<p><strong>${funcionario} recebeu um aumento salarial!<strong></p>`
+    resreaj.innerHTML += `<p>O salário atual era R$${salario.toFixed(2)}</p>`
+    resreaj.innerHTML += `<p>Com um aumento de ${porc_reaj}%, o salário vai aumentar R$${porcsalarionovo.toFixed(2)} no próximo mês.</p>`
+    resreaj.innerHTML += `<p>E a partir daí, ${funcionario} vai passar a ganhar R$${salarionovo.toFixed(2)}</p>`
+}
+
+    // ============================================
+
 
 function calcimc(){
     var peso = document.getElementById('peso')
