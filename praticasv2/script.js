@@ -187,6 +187,93 @@ function reajuste(){
 
     // ============================================
 
+function bhaskara(){
+    let a = Number(prompt('Qual é o valor de a?'))
+    let b = Number(prompt('Qual é o valor de b?'))
+    let c = Number(prompt('Qual é o valor de c?'))
+    let resb = document.querySelector('p#resb')
+    let delta = b*b - (4*a*c)
+
+    resb.innerHTML = ''
+    resb.innerHTML += `<p>A equação atual é <strong>${a}x² + ${b}x + ${c} = 0</strong></p>`
+    resb.innerHTML += `<p>&Delta; = ${b}² - 4x${a}x${c}</p>`
+    resb.innerHTML += `<p><mark>&Delta; = ${delta}</mark></p>`
+}
+
+    // ============================================
+
+function bissexto(){
+    let ano = Number(document.getElementById('ano').value)
+    let resbi = document.getElementById('resbi')
+
+    resbi.innerHTML = 'Resposta: '
+    if(ano%400 == 0){
+        resbi.innerHTML += `É ano bissexto`
+    } else if (ano%4==0 && ano%100!=0){
+        resbi.innerHTML += `É ano bissexto`
+    } else {
+        resbi.innerHTML += `Não é bissexto`
+    }
+
+}
+
+    // ============================================
+
+function mudouPreco(){
+    let precoAnterior = Number(document.getElementById('precoanterior').value)
+    let precoAtual = Number(document.getElementById('precoatual').value)
+    let diferencaPreco = precoAtual - precoAnterior
+    let respreco = document.getElementById('respreco')
+    let porc_dif = (diferencaPreco / precoAnterior) * 100
+
+    respreco.innerHTML = ''
+    if(precoAtual > precoAnterior){
+        respreco.innerHTML += `<p><strong>Analisando os valores informados</strong></p>`
+        respreco.innerHTML += `<p>O produto custava R$${precoAnterior.toFixed(2).replace('.',',')} e agora custa R$${precoAtual.toFixed(2).replace('.',',')}.</p>`
+        respreco.innerHTML += `<p>Hoje o produto está mais caro.</p>`
+        respreco.innerHTML += `<p>O preço subiu R$${diferencaPreco.toFixed(2).replace('.',',')} em relação ao preço anterior.</p>`
+        respreco.innerHTML += `<p>Uma variação de ${porc_dif.toFixed(1)}% pra cima.</p>`
+    } else if (precoAtual < precoAnterior){
+        respreco.innerHTML += `<p><strong>Analisando os valores informados</strong></p>`
+        respreco.innerHTML += `<p>O produto custava R$${precoAnterior.toFixed(2).replace('.',',')} e agora custa R$${precoAtual.toFixed(2).replace('.',',')}.</p>`
+        respreco.innerHTML += `<p>Hoje o produto está mais barato.</p>`
+        respreco.innerHTML += `<p>O preço diminuiu R$${diferencaPreco.toFixed(2).replace('.',',')} em relação ao preço anterior.</p>`
+        respreco.innerHTML += `<p>Uma variação de ${porc_dif.toFixed(1)}% pra baixo.</p>`
+    } else {
+        respreco.innerHTML = `<strong>O produto permaneceu o mesmo valor.</strong>`
+    }
+
+}
+
+    // ============================================
+
+function situacaoAluno(){
+    let aluno = prompt('Qual é o nome do aluno?')
+    let nota1 = Number(prompt(`Primeira nota de ${aluno}`))
+    let nota2 = Number(prompt(`Segunda nota de ${aluno}`))
+    let media = (nota1 + nota2) / 2
+    let resnota = document.getElementById('resnota')
+
+    resnota.innerHTML = ''
+
+    if(media < 3){
+        resnota.innerHTML += `<p><strong>Analisando a situação de ${aluno}</strong></p>`
+        resnota.innerHTML += `<p>Com as notas ${nota1.toFixed(2)} e ${nota2.toFixed(2)} a <strong> média é ${media.toFixed(2)}</strong></p>`
+        resnota.innerHTML += `<p>Com a média abaixo de 3.0, o aluno está <mark id="reprovado">REPROVADO</mark></p>`
+    } else if (media>3 && media<6){
+        resnota.innerHTML += `<p><strong>Analisando a situação de ${aluno}</strong></p>`
+        resnota.innerHTML += `<p>Com as notas ${nota1.toFixed(2)} e ${nota2.toFixed(2)} a <strong> média é ${media.toFixed(2)}</strong></p>`
+        resnota.innerHTML += `<p>Com a média entre 3.0 e 6.0, o aluno está em <mark id="recuperacao">RECUPERAÇÃO</mark></p>`
+    } else {
+        resnota.innerHTML += `<p><strong>Analisando a situação de ${aluno}</strong></p>`
+        resnota.innerHTML += `<p>Com as notas ${nota1.toFixed(2)} e ${nota2.toFixed(2)} a <strong> média é ${media.toFixed(2)}</strong></p>`
+        resnota.innerHTML += `<p>Com a média acima de 6.0, o aluno está <mark id="aprovado">APROVADO</mark></p>`
+    }
+
+}
+    // ============================================
+
+
 
 function calcimc(){
     var peso = document.getElementById('peso')

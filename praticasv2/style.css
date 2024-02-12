@@ -37,6 +37,21 @@ select#lista{
     width: 150px;
 }
 
+mark#reprovado{
+    background-color: rgba(255, 0, 0, 0.226);
+    color: red;
+}
+
+mark#recuperacao{
+    background-color: rgb(252, 216, 150);
+    color: rgb(133, 86, 0);
+}
+
+mark#aprovado{
+    background-color: rgb(183, 255, 183);
+    color: green;
+}
+
 #bv{
     display: flex;
     flex-direction: column;
