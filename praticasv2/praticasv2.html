@@ -40,6 +40,7 @@
             <fieldset>
                 <legend><h1>Antes e depois</h1></legend>
                 <input type="button" value="Antecessor e Sucessor" onclick="antdep()">
+                <p id="resantdep"></p>
             </fieldset>
         </form>
     </div>
@@ -217,7 +218,7 @@
         </form>
     </div>
 <!-- ==================== ESTUDAR MAIS ========================== -->
-
+<!-- 
     <div>
         <form action="">
             <fieldset>
@@ -232,7 +233,28 @@
                 <p id="resan"></p>
             </fieldset>
         </form>
+    </div> -->
+
+    <div>
+        <form action="">
+            <fieldset>
+                <legend><h1>Analisador</h1></legend>
+                <p>Digite um número: <input type="number" name="num" id="num"> <input type="button" value="Adicionar" onclick="analisar()"></p>
+
+                <p>
+                    <select name="lista" id="lista" size="10"></select>
+                </p>
+
+                <p>
+                    <input type="button" value="Finalizar" onclick="Finalizar()">
+                </p>
+                <p id="resan">
+
+                </p>
+            </fieldset>
+        </form>
     </div>
+
 
     <script src="analisador.js"></script>
 

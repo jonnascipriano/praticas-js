@@ -15,6 +15,8 @@ if(hora < 12){
     ola.innerHTML = `Bom dia!`
 } else if (hora < 18){
     ola.innerHTML = `Boa tarde!`
+    document.body.style.background = '#225'
+    document.body.style.color = '#fff'
 } else {
     ola.innerHTML = `Boa noite!`
     document.body.style.background = '#114'
@@ -94,7 +96,8 @@ function antdep(){
     let num = window.prompt('Digite um número inteiro qualquer')
     let ant = Number(num) - 1
     let pos = Number(num) + 1
-    alert(`Antes de ${num}, temos o número ${ant}.\nDepois de ${num}, temos o número ${pos}.`)
+    let resantdep = document.getElementById('resantdep')
+    resantdep.innerHTML = `Antes de ${num}, temos o número ${ant}.<br>Depois de ${num}, temos o número ${pos}.`
 }
 
     // ============================================
