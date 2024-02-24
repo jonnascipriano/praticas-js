@@ -17,15 +17,43 @@
     </div> -->
     <header>
         <nav>
-            <ul>
-                <h1>Jonnas Cipriano <img src="" alt=""></h1>
-                <li>Home</li>
-                <li>Sobre</li>
-                <li>Projetos</li>
-                <li>Redes Sociais</li>
+            <div id="name">
+                <img src="imagens/jonnas.webp" alt="" width="100px">
+                <h1>Jonnas Cipriano<h1>
+            </div>
+            <ul id="links">
+                <li><a class="links" href="">Home</a></li>
+                <li><a class="links" href="">Sobre</a></li>
+                <li><a class="links" href="">Projetos</a></li>
+                <li><a class="links" href="">Redes Sociais</a></li>
+            </ul>
+            <ul id="modo">
+                <li>
+                    <button><img src="imagens/lua.png" alt="" onclick="noturno()"></button>
+                </li>
+                <li>
+                    <button>
+                        <img src="imagens/sol.png" alt="" onclick="diurno()">
+                    </button>
+                </li>
             </ul>
         </nav>
+        <hr>
     </header>
+
+    <main>
+        <section id="screen-princ">
+            <div>
+                <h1 id="screen-bv"></h1>
+                <p id="screen-hr"></p>
+                <p>Esse site foi criado na intenção de mostrar um pouco sobre mim e meus projetos.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
 
     <script src="script.js"></script>
 </body>
