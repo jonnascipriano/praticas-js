@@ -378,3 +378,9 @@ function contador(){
 
     // ============================================
 
+
+function teste(){
+    let a = prompt('Testado')
+    let testandop = document.querySelector('p#testandop')
+    testandop.innerHTML = a
+}
