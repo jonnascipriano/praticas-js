@@ -30,8 +30,9 @@ div#name{
     justify-content: center;
 }
 
-div#name h1{
+div#name p{
     font-size: 40px;
+    font-weight: bold;
     padding: 10px;
 }
 
@@ -110,8 +111,63 @@ section#screen-princ{
 
 section#screen-princ div{
     margin: auto;
-    width: 95%;
+    width: 70%;
     color: var(--cor1);
-    background-color: #ffffff9a;
+    background-color: #ffffffbd;
     padding: 20px;
+}
+
+section.projects{
+    height: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0px 1px 10px 0px;
+}
+
+section.projects img{
+    min-width: 300px;
+    max-width: 550px;
+}
+
+section.projects div.project-description{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+section.projects div.project-description h2{
+    font-size: 40px;
+    color: var(--cor1);
+}
+
+section.projects div.project-description p{
+    color: var(--cor6);
+}
+
+section.projects div.project-description a{
+    margin: 30px auto;
+    padding: 10px;
+    width: 200px;
+    border-radius: 20px;
+
+    background-color: var(--cor1);
+    color: var(--cor7);
+    box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.644);
+
+    font-size: 30px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    transition: .3s;
+}
+
+section.projects div.project-description a:hover{
+    transform: translate(-2px, -2px);
+    box-shadow: 1px 6px 5px 0px rgba(0, 0, 0, 0.644);
+    background-color: var(--cor6);
 }
