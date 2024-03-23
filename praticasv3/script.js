@@ -73,7 +73,7 @@ switch(mes){
 function noturno(){
     document.body.style.background = 'var(--cor1)'
     document.querySelector('nav').style.color = 'var(--cor3)'
-    // document.querySelector('nav  ul#links  li  a').style.color = 'var(--cor3)'
+    document.querySelectorAll('nav ul li a.links').style.color = 'var(--cor3)'
 }
 
 function diurno(){
